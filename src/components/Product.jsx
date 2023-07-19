@@ -1,11 +1,28 @@
 import React from 'react'
 
-const Product = () => {
+const Coin = ({name,symbol,imageScr,price}) => {
   return (
-    <div className="container">
-    <h1>Product</h1>
-</div>
+    <div className="coin">
+    
+      <img src={imageScr} alt={name} />
+      <h1>{symbol}</h1>
+      <p>{name}</p>
+      <h4>₹ {price}</h4>
+    </div>
+   
   )
 }
 
-export default Product
+export default Coin
+
+// const Product = ({value}) => {
+//   return (
+//     <div className="">
+
+//       <p>{value}</p>
+//     </div>
+   
+//   )
+// }
+
+// export default Product
