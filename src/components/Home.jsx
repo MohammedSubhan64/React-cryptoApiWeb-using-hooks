@@ -19,7 +19,7 @@ const Home = () => {
         // {"status":{"error_code":429,"error_message":"You've exceeded the Rate Limit. Please visit https://www.coingecko.com/en/api/pricing to subscribe to our API plans for higher rate limits.
         )
 
-        // console.log(data)
+        console.log(data)
         setCoins(data)
         setLoading(false)
 
@@ -41,6 +41,8 @@ const Home = () => {
   // },[]);
 
   return (
+    <div className="container">
+      <p className='heading'>All Cryptocurrencies</p>
     <div className="home">
     {
 
@@ -51,11 +53,12 @@ const Home = () => {
              symbol={i.symbol}
               key={i.id}  
               imageScr={i.image}/>)})  
-        )
-
-    }
+              )
+              
+            }
    
     </div>
+            </div>
 
 
 
